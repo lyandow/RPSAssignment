@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RPS and Dice</title>
+	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<header class="main-header">
+		<h1 class="name"><a href="#">JS Games</a></h1>
+		<ul class="main-nav">
+			<li><a href="#">one meme</a></li>
+			<li><a href="#">some memes</a></li>
+			<li><a href="#">memes</a></li>
+			<li><a href="#">even more memes</a></li>
+		</ul>
+	</header><!--/.main-header-->   
+  
+	<div class="banner">
+		<h1 class="headline">RPS and Dice Game</h1>
+		<span class="tagline">Made with JavaScript</span>
+	</div><!--/.banner-->
+	<div class="container clearfix">
+    <div class="secondary col">
+      <h2>Rock Paper Scissors</h2>
+      <h3>The Rules</h3>
+      <p>
+          In Rock Paper Scissors, you enter either rock, paper, or scissors. The computer will do the same, and your choice will be compared to the computer's. In order to win, your choice must 'beat' the computer's. Rock beats scissors but loses to paper, paper beats rock but loses to scissors, and scissors beats paper but loses to rock.
+          
+          Enter your choice into the field below!
+      </p>
+      <h3>The Game</h3>
+      <input id="choiceInput" placeholder="Rock, paper, or scissors">
+      <p>
+          Your Choice: <b id="playerChoice"></b>
+      </p>
+      <p>
+          Computer's Choice: <b id="computerChoice"></b>
+      </p>
+      <p>
+          Winner:  <b id="winner"></b>
+      </p>
+    </div><!--/.secondary-->
+    
+    <div class="primary col">
+      <h2>The Dice Game</h2>
+      <h3>The Rules</h3>
+      <p>
+          In this game, if you roll a 7 or 11, you will win. If you roll a 2, 3, or 12, you lose. If you roll anything else you can roll again!
+      </p>
+      <h3>The Game</h3>
+      <button id="gameButton">Roll</button>
+      <p>
+          You rolled: <b id="playerRoll"></b>
+      </p>
+      <p>
+          Result: <b id="result">Roll to begin.</b>
+      </p>
+    </div><!--/.primary-->
+  </div>
+	<footer class="main-footer clearfix">
+		<span>&copy;Louden Yandow</span>
+	</footer>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+  height: 100%;
+  margin: 0;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: darkred;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+	font-size: 1.25em;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.main-nav {
+  text-align: center;
+    padding-left: 0;
+}
+
+.name a,
+.main-nav a {
+	text-align: center;
+}
+
+.main-nav a {
+	font-size: .95em;
+	color: firebrick;
+	text-transform: uppercase;
+}
+
+.main-nav a:hover {
+	color: darkred;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  padding: 0.5em 0 0.5em 0; 
+  box-shadow: 0px 5px 18px #000;
+  z-index: 10000000;
+  position: relative;
+  border-bottom: solid 2px darkred;
+  border-radius: 2px;
+}
+
+.banner {
+	color: #000;
+	background-image: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 0, 0) 20%, rgba(255, 255, 255, 1) 98%), url("../img/dice.jpg");
+  background-size: cover;
+  text-align: center;
+  padding: 15px 0;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+  height: 500px;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 30px;
+  box-shadow: 0 -5px 18px #000;
+  border-top: solid 2px darkred;
+  border-radius: 2px;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1150px;
+}
+
+.headline {
+    margin-top: 30%;   
+}
+
+.main-nav li {
+    list-style: none;
+    text-align: center;
+}
+
+/* ---- Page Elements ---- */
+
+#choiceInput {
+    border: solid 2px darkred; 
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px black;
+}
+
+#gameButton {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 2px black;
+}
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  
+  .name {
+    display: inline-block;
+    width: 40%;
+  padding-left: 15px;
+  margin-right: 5%;
+  text-align: left;
+}
+
+  .main-nav {
+  display: inline; 
+  width: 30%;
+  margin-left: 10%;
+  margin-right: 10px;
+}
+  
+  .main-nav li {
+   display: inline-block;
+   margin: 5px 10px 5px -5px;
+}
+
+  .secondary, .primary {
+  float: left;
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+}
+
+@media (min-width: 1150px) {
+
+.main-nav {
+  text-align: right; 
+}
+
+.main-nav li {
+  margin: 5px 10px;
+}
+
+.name {
+  text-align: left;
+}
+
+.container {
+  padding: 0 5%; 
+}
+
+.col {
+  float: left;
+  width: 45%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
