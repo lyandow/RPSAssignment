@@ -7,6 +7,8 @@ const choiceInput = document.getElementById("choiceInput");
 const spanPChoice = document.getElementById("playerChoice");
 const spanCChoice = document.getElementById("computerChoice");
 const winnerP = document.getElementById("winner");
+const playButton = document.getElementById('basic-radio-button');
+var radioButtons = document.querySelectorAll('input[name="basic-radio"]');
 var compChoice;
 
 // -----------------------------------------
@@ -23,26 +25,26 @@ const result = document.getElementById("result");
 // -----------------------------------------
 function compOutput () {
     var rand = Math.floor(Math.random() * 3) + 1;
-    spanPChoice.innerHTML = choiceInput.value;
-    if (rand == 1) 
+    spanPChoice.innerHTML = playButton.value;
+    if (rand == 1)
     {
         compChoice = 'ROCK';
     }
-    else if (rand == 2) 
+    else if (rand == 2)
     {
-        compChoice = 'PAPER';   
+        compChoice = 'PAPER';
     }
-    else 
+    else
     {
-        compChoice = 'SCISSORS';   
+        compChoice = 'SCISSORS';
     }
     spanCChoice.innerHTML = compChoice.toLowerCase();
 }
 
 function decision (userMove, computerMove) {
-     if ((userMove == computerMove) || ((userMove == 'SCISSOR' || userMove == 'SCISSORS') && computerMove == 'SCISSORS'))
+     if ((userMove == computerMove) || (userMove == 'SCISSORS' && computerMove == 'SCISSORS'))
     {
-        winnerP.innerHTML = "Tie!";   
+        winnerP.innerHTML = "Tie!";
     }
     else if (userMove == 'ROCK' && computerMove == 'PAPER')
     {
@@ -55,7 +57,7 @@ function decision (userMove, computerMove) {
     else if (userMove == 'PAPER' && computerMove == 'SCISSORS')
     {
         winnerP.innerHTML = "Computer wins!";
-    }    
+    }
     else if (userMove == 'PAPER' && computerMove == 'ROCK')
     {
         winnerP.innerHTML = "You win!";
@@ -68,17 +70,19 @@ function decision (userMove, computerMove) {
     {
         winnerP.innerHTML = "Computer wins!";
     }
-    else 
-    {
-        spanPChoice.innerHTML = "Please enter either rock, paper, or scissors!";
-        winnerP.innerHTML = "";
-    }   
 }
 
-choiceInput.addEventListener("change", function (){
-    var userChoice = choiceInput.value.toUpperCase();
+playButton.addEventListener("click", function (){
+    var selectedRadio;
+    for (var i = 0; i < radioButtons.length; i++)   {
+      if (radioButtons[i].checked) {
+        selectedRadio = radioButtons[i];
+        break;
+      }
+    }
     compOutput();
-    decision(userChoice, compChoice);
+    decision(selectedRadio.value, compChoice);
+    spanPChoice.innerHTML = selectedRadio.value.toLowerCase();
 });
 
 
@@ -90,7 +94,7 @@ choiceInput.addEventListener("change", function (){
 gameButton.addEventListener('click', function (){
     var roll = Math.floor(Math.random() * 12) + 1;
     playerRoll.innerHTML = roll;
-    
+
     if (roll == 2 || roll == 3 || roll == 12)
     {
        result.innerHTML = "You lose!";
@@ -99,30 +103,8 @@ gameButton.addEventListener('click', function (){
     {
         result.innerHTML = "You won!";
     }
-    else 
+    else
     {
         result.innerHTML = "Roll again!";
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
