@@ -1,0 +1,34 @@
+body {
+    background: linear-gradient(#000, #ddd 200px, #ddd 90%, #000);
+    margin: 0;
+    width: 100%;
+}
+
+header {
+  position: fixed;
+  z-index: 100000000000;
+  top: 0;
+  height: 100px;
+  background-color: #ddd;
+  box-shadow: 0 5px 10px #000;
+  border-bottom-style: solid;
+  border-bottom-color: #dd2323;
+  width: 100%;
+
+}
+
+#col {
+  margin: 103px 0;
+  text-align: center;
+}
+
+#nums {
+  display: block;
+  word-wrap: break-word;
+  margin: 5% 20% auto 20%;
+}
+
+#buttons {
+  width: 60%;
+  margin: 50px auto;
+}
