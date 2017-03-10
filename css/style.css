@@ -1,4 +1,4 @@
-/* ================================= 
+/* =================================
   Base Element Styles
 ==================================== */
 
@@ -10,7 +10,6 @@ body {
 	font-family: 'Varela Round', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
-  height: 100%;
   margin: 0;
 }
 
@@ -42,7 +41,7 @@ footer {
   text-align: center;
 }
 
-/* ================================= 
+/* =================================
   Base Layout Styles
 ==================================== */
 
@@ -77,7 +76,7 @@ footer {
 /* ---- Layout Containers ---- */
 
 .main-header {
-  padding: 0.5em 0 0.5em 0; 
+  padding: 0.5em 0 0.5em 0;
   box-shadow: 0px 5px 18px #000;
   z-index: 10000000;
   position: relative;
@@ -113,7 +112,7 @@ footer {
 }
 
 .headline {
-    margin-top: 30%;   
+    margin-top: 30%;
 }
 
 .main-nav li {
@@ -122,9 +121,12 @@ footer {
 }
 
 /* ---- Page Elements ---- */
+#body {
+	  height: 100%;
+}
 
 #choiceInput {
-    border: solid 2px darkred; 
+    border: solid 2px darkred;
     border-radius: 2px;
     box-shadow: 2px 2px 2px black;
 }
@@ -138,12 +140,12 @@ footer {
     border-radius: 15px;
     box-shadow: 1px 1px 2px black;
 }
-/* ================================= 
+/* =================================
   Media Queries
 ==================================== */
 
 @media (min-width: 769px) {
-  
+
   .name {
     display: inline-block;
     width: 40%;
@@ -153,12 +155,12 @@ footer {
 }
 
   .main-nav {
-  display: inline; 
+  display: inline;
   width: 30%;
   margin-left: 10%;
   margin-right: 10px;
 }
-  
+
   .main-nav li {
    display: inline-block;
    margin: 5px 10px 5px -5px;
@@ -184,7 +186,7 @@ footer {
 @media (min-width: 1150px) {
 
 .main-nav {
-  text-align: right; 
+  text-align: right;
 }
 
 .main-nav li {
@@ -196,7 +198,7 @@ footer {
 }
 
 .container {
-  padding: 0 5%; 
+  padding: 0 5%;
 }
 
 .col {
@@ -205,18 +207,3 @@ footer {
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
