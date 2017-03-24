@@ -1,0 +1,47 @@
+body {
+  text-align: center;
+}
+
+li {
+  margin: 5px 10px 5px 10px;
+  list-style: none;
+}
+
+#current-note {
+  font-size: 24px;
+  min-height: 32px;
+}
+
+#piano {
+  border: 1px solid black;
+  margin: auto;
+  display: inline-block;
+  padding: 4px;
+  background-color: #dfdfdf;
+}
+
+.key {
+  height: 200px;
+  width: 50px;
+  display: inline-block;
+  border: 1px solid grey;
+  background-color: white;
+}
+
+.key.sharp {
+  background-color: black;
+  width: 25px;
+  height: 155px;
+  position: absolute;
+  margin-left: -14px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.key.pressed {
+  background-color: #dfdfdf;
+}
+
+.key.sharp.pressed {
+  background-color: #000;
+}
